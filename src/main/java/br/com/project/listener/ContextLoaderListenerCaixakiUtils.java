@@ -18,7 +18,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  * */
 
 @ApplicationScoped // instancia unica
-public class ContextLoaderListenerOptimaUtils extends ContextLoaderListener implements Serializable {
+public class ContextLoaderListenerCaixakiUtils extends ContextLoaderListener implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

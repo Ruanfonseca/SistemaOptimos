@@ -21,7 +21,7 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 
 import br.com.framework.hibernate.session.HibernateUtil;
 import br.com.framework.utils.UtilFramework;
-import br.com.project.listener.ContextLoaderListenerOptimaUtils;
+import br.com.project.listener.ContextLoaderListenerCaixakiUtils;
 import br.com.project.model.classes.Entidade;
 
 /*
@@ -52,7 +52,7 @@ public class FilterOpenSessionView extends DelegatingFilterProxy implements Seri
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain Chain)
 			throws ServletException, IOException {
 		// JDBC spring
-		DataSource springDataSource = (DataSource) ContextLoaderListenerOptimaUtils.getBean("springDataSource");
+		DataSource springDataSource = (DataSource) ContextLoaderListenerCaixakiUtils.getBean("springDataSource");
 		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
 		PlatformTransactionManager transactionManager = new DataSourceTransactionManager(
 				(javax.sql.DataSource) springDataSource);

@@ -33,7 +33,7 @@
 <hibernate-configuration>
 	<session-factory name="sessionFactory">
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasouce</property>
+		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasource</property>
 		<property name="hibernate.default_schema">public</property>
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
@@ -55,19 +55,23 @@
 
 		<listener
 			class="org.hibernate.envers.event.AuditEventListener"
-			type="post-insert" />
-		<listener
-			class="org.hibernate.envers.event.AuditEventListener"
 			type="post-update" />
 		<listener
 			class="org.hibernate.envers.event.AuditEventListener"
 			type="post-delete" />
 		<listener
 			class="org.hibernate.envers.event.AuditEventListener"
+			type="post-insert" />
+		
+		
+		<listener
+			class="org.hibernate.envers.event.AuditEventListener"
 			type="post-collection-recreate" />
+		
 		<listener
 			class="org.hibernate.envers.event.AuditEventListener"
 			type="pre-collection-update" />
+		
 		<listener
 			class="org.hibernate.envers.event.AuditEventListener"
 			type="pre-collection-remove" />
