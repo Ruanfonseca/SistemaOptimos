@@ -135,7 +135,7 @@
 		lazy-init="false">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="src/main/webapp/" />
+		<property name="prefix" value="/webapp/" />
 		<property name="suffix"
 			value="*.jsf, *.xhtml, *.html, *.jsp, *.js" />
 

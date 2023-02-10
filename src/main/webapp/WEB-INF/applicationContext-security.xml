@@ -26,19 +26,27 @@
 
 		<intercept-url pattern="/cadastro/cad_permissao.jsf"
 			access="hasAnyRole('ADMIN')" method="POST" />
+			
 		<intercept-url pattern="/resources/components/**"
 			access="isAuthenticated() and hasAnyRole('USER')" />
+		
 		<intercept-url pattern="/resources/**"
 			access="isAuthenticated() and hasAnyRole('USER')" />
+		
 		<intercept-url pattern="/restrito/**"
 			access="isAuthenticated() and hasAnyRole('USER')" />
+		
 		<intercept-url pattern="/error/**"
 			access="isAnonymous() or isAuthenticated() or !isAuthenticated()" />
+		
 		<intercept-url pattern="/templates/**"
 			access="isAuthenticated() and hasAnyRole('USER')" />
+		
 		<intercept-url pattern="/cadastro/**"
 			access="isAuthenticated() and hasAnyRole('USER')" />
+		
 		<intercept-url pattern="/publico/**" access="permitAll" />
+		
 		<intercept-url pattern="/teste/**" access="permitAll" />
 
 		<form-login login-page="/publico/login.jsf"
