@@ -51,7 +51,7 @@
 
 		<form-login login-page="/publico/login.jsf"
 			always-use-default-target="true"
-			default-target-url="/restrito/principal.jsf"
+			default-target-url="/resources/restrito/Principal.jsf"
 			authentication-failure-url="/publico/login.jsf?login_error=1" />
 
 		<logout invalidate-session="true"
