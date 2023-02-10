@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+
+<Context reloadable="true">
+
+<!--
+ maxActive="50" numero de transações ativas do banco
+ defaultAutoCommit = "false" propriedade que não permite a aplicação commitar
+ maxIdle="10" limpando o pool de conexão 
+ maxWait="10" tempo de ociosidade
+ initialSize="10" quantas conexoes criadas quando o servidor subir a aplicação
+ validationQuery=" SELECT 'OK' " testando a conexão com o banco
+ testWhileIdle="true" verifica conexões ociosas
+ numTestPerEvictionRun="5" determina o numero de conexões a serem validadas
+ -->
+<Resource
+  name="jdbc/datasource"
+  auth="Container"
+  type="javax.sql.DataSource"
+  defaultAutoCommit = "false"
+  maxActive="50"
+  maxIdle="10"
+  maxWait="10"
+  initialSize="10"
+  driverClassName="org.postgresql.Driver"
+  validationQuery=" SELECT 'OK' "
+  testWhileIdle="true"
+  testOnBorrow="true"
+  numTestPerEvictionRun="5"
+  timeBetweenEvictionRUnMillis="5000"
+  minEvictableIdleTimeMillis="60000"
+  antiJARLocking = "false"
+  antiResourceLocking="false"
+  username="postgres"
+  password="ruan123"
+  url="jdbc:postgresql://127.0.0.1:5432/posjavahibernate?autoReconect=true"/>
+</Context>
